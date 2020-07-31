@@ -121,3 +121,30 @@ export const Issues = styled.div`
     }
   }
 `;
+
+export const Loading = styled.div`
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-top-color: #3a3a3a;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
+
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  p {
+    color: #3a3a3a;
+  }
+`;

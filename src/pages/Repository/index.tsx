@@ -5,7 +5,9 @@ import api from '../../services/api';
 
 import logoImg from '../../assets/logo.svg';
 
-import { Header, RepositoryInfo, Issues } from './styles';
+import {
+  Header, RepositoryInfo, Issues, Loading,
+} from './styles';
 
 interface RepositoryParams {
   repository: string;
@@ -39,13 +41,13 @@ const Repository: React.FC = () => {
   const { params } = useRouteMatch<RepositoryParams>();
 
   useEffect(() => {
-    api.get(`/repos/${params.repository}`).then((response) => {
-      setRepository(response.data);
-    });
+    // api.get(`/repos/${params.repository}`).then((response) => {
+    //   setRepository(response.data);
+    // });
 
-    api.get(`/repos/${params.repository}/issues`).then((response) => {
-      setIssues(response.data);
-    });
+    // api.get(`/repos/${params.repository}/issues`).then((response) => {
+    //   setIssues(response.data);
+    // });
   }, [params.repository]);
 
   return (
@@ -88,7 +90,10 @@ const Repository: React.FC = () => {
 
         </RepositoryInfo>
       ) : (
-        <p>Carregando...</p>
+        <Loading>
+          <div />
+          <p>Carregando...</p>
+        </Loading>
       )}
 
       <Issues>
