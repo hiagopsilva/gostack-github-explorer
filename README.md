@@ -5,6 +5,14 @@
 
 > Github Explorer tem a finalidade de mostrar as issues de um repositório do Github. Este projeto foi desenvolvido através do bootcamp GoStack da Rocketseat.
 
+## Demo 
+
+##### link site: 
+
+![image](https://user-images.githubusercontent.com/47197695/88988066-2ed3db00-d2ae-11ea-93d0-e3388c35664d.png)
+
+![image](https://user-images.githubusercontent.com/47197695/88988110-50cd5d80-d2ae-11ea-817e-0e88ab4550a9.png)
+
 ## Install
 
 ```sh
